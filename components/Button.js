@@ -17,7 +17,7 @@ export const CircleButton = ({imgUrl, handlePress, ...props}) => {
       }}
       onPress={handlePress}
     >
-        <Image source={imgUrl} resizeMode="contained" style={{width: 24 , height: 24}}/>
+        <Image source={imgUrl} resizeMode="contain" style={{width: 24 , height: 24}}/>
     </TouchableOpacity>
   );
 };
