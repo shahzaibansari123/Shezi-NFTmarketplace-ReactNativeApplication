@@ -17,8 +17,13 @@ import {
 } from "../components";
 
 const Details = ({ route, navigation }) => {
-  const { data } = route.parametersconsole.log(
-    `----------------------------- ${data}-------------------`
+  const { data } = route.params
+  console.log(
+    `------------------------------------------------`
+  );
+  console.log(data)
+  console.log(
+    `------------------------------------------------`
   );
   return <Text>Details</Text>;
 };
