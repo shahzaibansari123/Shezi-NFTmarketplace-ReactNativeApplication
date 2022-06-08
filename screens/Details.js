@@ -15,6 +15,13 @@ import {
   DetailsDesc,
   DetailsBid,
 } from "../components";
+import React from "react";
+
+const DetailsHeader = ({ data, navigation }) => (
+  <View style={{ width: "100%", height: 373 }}>
+    <Image source={data.image} />
+  </View>
+);
 
 const Details = ({ route, navigation }) => {
   const { data } = route.params;
@@ -48,14 +55,14 @@ const Details = ({ route, navigation }) => {
       </View>
       <FlatList
         data={data.bids}
-        renderItem={({ item }) => (
-          <DetailsBid
-            bid={item}
-            keyExtractor={(item) => item.id}
-            showsVerticalScrollIndicator={false}
-            contentContainerStyle={{paddingBottom: SIZES.extraLarge * 3}}
-          
-          />
+        renderItem={({ item }) => <DetailsBid bid={item} />}
+        keyExtractor={(item) => item.id}
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ paddingBottom: SIZES.extraLarge * 3 }}
+        ListHeaderComponent={() => (
+          <React.Fragment>
+            <DetailsHeader data={data} navigation={navigation} />
+          </React.Fragment>
         )}
       />
     </SafeAreaView>
