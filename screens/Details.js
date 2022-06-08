@@ -18,14 +18,23 @@ import {
 
 const Details = ({ route, navigation }) => {
   const { data } = route.params
-  console.log(
-    `------------------------------------------------`
-  );
-  console.log(data)
-  console.log(
-    `------------------------------------------------`
-  );
-  return <Text>Details</Text>;
+  // console.log(
+  //   `------------------------------------------------`
+  // );
+  // console.log(data)
+  // console.log(
+  //   `------------------------------------------------`
+  // );
+  return(
+   <SafeAreaView style={{flex: 1}}>
+     <FocusedStatusBar 
+     barStyle="dark-content"
+     backgroundColor="transparent"
+     translucent={true}
+     />
+
+   </SafeAreaView>
+  )
 };
 
 export default Details;
