@@ -18,7 +18,7 @@ import {
 import React from "react";
 
 const DetailsHeader = ({ data, navigation }) => (
-  <View style={{ width: "100%", height: 373 , marginTop: "10%"}}>
+  <View style={{ width: "100%", height: 373 }}>
     <Image
       source={data.image}
       resizeMode="cover"
@@ -27,7 +27,14 @@ const DetailsHeader = ({ data, navigation }) => (
 <CircleButton
   imgUrl={assets.left}
   handlePress={() => navigation.goBack()}
-  
+  left={15}
+  top={StatusBar.currentHeight + 10}
+/>
+<CircleButton
+  imgUrl={assets.heart}
+  // handlePress={() => navigation.goBack()}
+  right={15}
+  top={StatusBar.currentHeight + 10}
 />
   </View>
 );
@@ -71,6 +78,7 @@ const Details = ({ route, navigation }) => {
         ListHeaderComponent={() => (
           <React.Fragment>
             <DetailsHeader data={data} navigation={navigation} />
+            <SubInfo />
           </React.Fragment>
         )}
       />
