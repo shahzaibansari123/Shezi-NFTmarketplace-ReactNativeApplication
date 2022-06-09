@@ -18,8 +18,17 @@ import {
 import React from "react";
 
 const DetailsHeader = ({ data, navigation }) => (
-  <View style={{ width: "100%", height: 373 }}>
-    <Image source={data.image} />
+  <View style={{ width: "100%", height: 373 , marginTop: "10%"}}>
+    <Image
+      source={data.image}
+      resizeMode="cover"
+      style={{ width: "100%", height: "100%" }}
+    />
+<CircleButton
+  imgUrl={assets.left}
+  handlePress={() => navigation.goBack()}
+  
+/>
   </View>
 );
 
