@@ -1,7 +1,9 @@
 import { View, Text } from 'react-native'
-import React from 'react'
+import {useState} from 'react'
+import { EthPrice, NFTTitle } from './SubInfo'
+import {COLORS, SHADOWS, SIZES, FONTS} from '../constants'
 
-const DetailsDesc = () => {
+const DetailsDesc = ({data}) => {
   return (
     <View>
       <Text>DetailsDesc</Text>
