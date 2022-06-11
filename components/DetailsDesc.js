@@ -5,9 +5,11 @@ import {COLORS, SHADOWS, SIZES, FONTS} from '../constants'
 
 const DetailsDesc = ({data}) => {
   return (
+    <>
     <View>
-      <Text>DetailsDesc</Text>
+      <NFTTitle />
     </View>
+    </>
   )
 }
 
