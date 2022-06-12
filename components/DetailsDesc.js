@@ -22,7 +22,7 @@ const DetailsDesc = ({ data }) => {
         />
         <EthPrice price={data.price} />
       </View>
-      <View style={{marginVertical: SIZES.extraLarge}}> 
+      <View style={{marginVertical: SIZES.extraLarge * 1.5}}> 
 
       </View>
     </>
