@@ -11,8 +11,9 @@ const DetailsDesc = ({ data }) => {
           title={data.name}
           subTitle={data.creator}
           titleSize={SIZES.extraLarge}
-          subTitleSize={SIZES.font}
+          subTitleSize={SIZES.font }
         />
+        <EthPrice price={data.price}/>
       </View>
     </>
   );
