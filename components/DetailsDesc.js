@@ -4,6 +4,8 @@ import { EthPrice, NFTTitle } from "./SubInfo";
 import { COLORS, SHADOWS, SIZES, FONTS } from "../constants";
 
 const DetailsDesc = ({ data }) => {
+  const [text, setText] = useState(data.description.slice(0,100))
+  const [readMore, setReadMore] = useState(false)
   return (
     <>
       <View
@@ -37,11 +39,12 @@ const DetailsDesc = ({ data }) => {
           style={{
             fontSize: SIZES.small,
             fontFamily: FONTS.regular,
-            colors: COLORS.secondary,
+            color: COLORS.secondary,
             lineHeight: SIZES.large,
           }}
         >
-         {data.description}
+         {text}
+        {!readMore && '...'}
         </Text>
         </View>
       </View>
