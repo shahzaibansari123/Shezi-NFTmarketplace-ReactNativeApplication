@@ -32,6 +32,18 @@ const DetailsDesc = ({ data }) => {
         >
           Description
         </Text>
+        <View style={{marginTop: SIZES. base}}>
+        <Text
+          style={{
+            fontSize: SIZES.small,
+            fontFamily: FONTS.regular,
+            colors: COLORS.secondary,
+            lineHeight: SIZES.large,
+          }}
+        >
+         {data.description}
+        </Text>
+        </View>
       </View>
     </>
   );
