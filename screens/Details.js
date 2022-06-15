@@ -81,6 +81,9 @@ const Details = ({ route, navigation }) => {
             <SubInfo />
             <View style={{ padding: SIZES.font }}>
               <DetailsDesc data={data} />
+              {data.bids.length > 0  && ( 
+                <Text></Text>
+              )}
             </View>
           </React.Fragment>
         )}
