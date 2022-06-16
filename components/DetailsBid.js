@@ -1,14 +1,18 @@
-import { View, Text , Image} from 'react-native'
-import {EthPrice} from './SubInfo'
-import {COLORS, SHADOWS, SIZES, FONTS} from '../constants'
-import React from 'react'
+import { View, Text, Image } from "react-native";
+import { EthPrice } from "./SubInfo";
+import { COLORS, SHADOWS, SIZES, FONTS } from "../constants";
+import React from "react";
 
-const DetailsBid = () => {
+const DetailsBid = ({ bid }) => {
   return (
     <View>
-      <Text>DetailsBid</Text>
+      <Image
+        source={bid.image}
+        resizeMode="contain"
+        style={{ width: 48, height: 48 }}
+      />
     </View>
-  )
-}
+  );
+};
 
-export default DetailsBid
+export default DetailsBid;
