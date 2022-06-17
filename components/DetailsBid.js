@@ -11,6 +11,9 @@ const DetailsBid = ({ bid }) => {
         resizeMode="contain"
         style={{ width: 48, height: 48 }}
       />
+      <View>
+        <Text>Bid placed by {bid.name}</Text>
+      </View>
     </View>
   );
 };
