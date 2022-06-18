@@ -26,12 +26,14 @@ const DetailsBid = ({ bid }) => {
             fontFamily: FONTS.regular,
             fontSize: SIZES.small - 2,
             color: COLORS.secondary,
-            margintop: 3,
+            marginTop: 3,
           }}
         >
          {bid.date}
         </Text>
       </View>
+
+      <EthPrice price={bid.price} /> 
     </View>
   );
 };
