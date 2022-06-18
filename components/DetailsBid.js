@@ -5,7 +5,16 @@ import React from "react";
 
 const DetailsBid = ({ bid }) => {
   return (
-    <View>
+    <View
+      style={{
+        width: "100%",
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+        marginVertical: SIZES.base,
+        paddingHorizontal: SIZES.base * 2,
+      }}
+    >
       <Image
         source={bid.image}
         resizeMode="contain"
@@ -29,11 +38,11 @@ const DetailsBid = ({ bid }) => {
             marginTop: 3,
           }}
         >
-         {bid.date}
+          {bid.date}
         </Text>
       </View>
 
-      <EthPrice price={bid.price} /> 
+      <EthPrice price={bid.price} />
     </View>
   );
 };
