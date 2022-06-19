@@ -7,7 +7,7 @@ import { COLORS, NFTData } from "../constants";
 import { NFTCard, HomeHeader, FocusedStatusBar } from "../components";
 
 const Home = () => {
-  const [nftdata, setNftData] = useState(NFTData);
+  const [nftData, setNftData] = useState(NFTData);
 
   const handleSearch = (value) => {
     if (!value.length) return setNftData(NFTData);
@@ -29,10 +29,10 @@ const Home = () => {
       <View style={{ flex: 1 }}>
         <View style={{ zIndex: 0 }}>
           <FlatList
-            data={NFTData}
+            data={nftData}
             renderItem={({ item }) => <NFTCard data={item} />}
             keyExtractor={(item) => item.id}
-            ListHeaderComponent={<HomeHeader />}
+            ListHeaderComponent={<HomeHeader onSearch={handleSearch}/>}
             showsVerticalScrollIndicator={false}
           />
         </View>
